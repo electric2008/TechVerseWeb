@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechVerse Thailand — ข่าวไอที เทคโนโลยี AI ทันสมัย</title>
+<meta name="description" content="ข่าวไอทีและเทคโนโลยีภาษาไทย อัปเดตทุกวัน AI, Startup, Gadget, EV และอีกมากมาย">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d0d1a;--surface:#13131f;--surface2:#1a1a2e;--accent:#00c8ff;--accent2:#7b5cf0;--text:#e8e8f0;--text2:#9999b3;--border:#ffffff12;--card:#16162a}
+body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans Thai',sans-serif;font-size:15px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,26,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--accent2),var(--accent));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff}
+.logo-text{font-size:16px;font-weight:600}
+.logo-text span{color:var(--accent)}
+.nav-links{display:flex;gap:24px}
+.nav-links a{font-size:13px;color:var(--text2)}
+.nav-links a:hover{color:var(--accent)}
+.nav-fb{font-size:12px;background:var(--accent);color:#000;padding:5px 14px;border-radius:20px;font-weight:500}
+.hero{max-width:1100px;margin:0 auto;padding:48px 24px 32px}
+.hero-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.hero-title{font-size:36px;font-weight:600;line-height:1.25;letter-spacing:-0.5px;max-width:600px;margin-bottom:8px}
+.hero-sub{font-size:14px;color:var(--text2)}
+.cats{max-width:1100px;margin:0 auto;padding:0 24px 28px;display:flex;gap:8px;flex-wrap:wrap}
+.cat{font-size:12px;padding:5px 14px;border-radius:20px;border:1px solid var(--border);color:var(--text2);cursor:pointer}
+.cat.active{background:var(--accent);border-color:var(--accent);color:#000;font-weight:500}
+.grid-wrap{max-width:1100px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:2fr 1fr;gap:24px}
+@media(max-width:768px){.grid-wrap{grid-template-columns:1fr}}
+.card-featured{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.card-featured:hover{border-color:#00c8ff30}
+.card-featured-img{width:100%;height:260px;object-fit:cover;display:block}
+.card-featured-img-placeholder{width:100%;height:260px;background:linear-gradient(135deg,var(--surface2),var(--surface));display:flex;align-items:center;justify-content:center;font-size:48px}
+.card-featured-body{padding:20px}
+.cat-badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:4px;margin-bottom:10px;font-weight:500}
+.b-ai{background:#7b5cf020;color:#a78bfa;border:1px solid #7b5cf030}
+.b-start{background:#00c8ff20;color:#00c8ff;border:1px solid #00c8ff30}
+.b-gadget{background:#f0902020;color:#fbbf24;border:1px solid #f0902030}
+.b-ev{background:#10b98120;color:#34d399;border:1px solid #10b98130}
+.b-cyber{background:#ef444420;color:#f87171;border:1px solid #ef444430}
+.b-soft{background:#8b5cf620;color:#c4b5fd;border:1px solid #8b5cf630}
+.b-tech{background:#6366f120;color:#818cf8;border:1px solid #6366f130}
+.card-title{font-size:20px;font-weight:600;line-height:1.35;margin-bottom:10px}
+.card-excerpt{font-size:14px;color:var(--text2);line-height:1.65;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-meta{display:flex;align-items:center;justify-content:space-between}
+.card-date{font-size:12px;color:var(--text2)}
+.card-more{font-size:12px;color:var(--accent)}
+.sidebar{display:flex;flex-direction:column;gap:12px}
+.card-small{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}
+.card-small:hover{border-color:#00c8ff30}
+.card-small-title{font-size:14px;font-weight:500;line-height:1.4;margin-bottom:8px}
+.card-small-date{font-size:11px;color:var(--text2)}
+.section-line{max-width:1100px;margin:0 auto;padding:0 24px 16px;display:flex;align-items:center;gap:12px}
+.section-line h2{font-size:16px;font-weight:600;white-space:nowrap}
+.section-line::after{content:'';flex:1;height:1px;background:var(--border)}
+.news-grid{max-width:1100px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.news-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.news-grid{grid-template-columns:1fr}}
+.card-news{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.card-news:hover{border-color:#00c8ff30}
+.card-news-img{width:100%;height:160px;object-fit:cover}
+.card-news-placeholder{width:100%;height:160px;background:linear-gradient(135deg,var(--surface2),var(--surface));display:flex;align-items:center;justify-content:center;font-size:32px}
+.card-news-body{padding:14px}
+.card-news-title{font-size:14px;font-weight:500;line-height:1.45;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-news-date{font-size:11px;color:var(--text2)}
+.empty{text-align:center;padding:80px 24px;color:var(--text2)}
+.empty-icon{font-size:48px;margin-bottom:16px}
+.empty-title{font-size:18px;font-weight:500;margin-bottom:8px;color:var(--text)}
+footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-logo{font-size:20px;font-weight:600;margin-bottom:8px}
+.footer-logo span{color:var(--accent)}
+.footer-sub{font-size:13px;color:var(--text2);margin-bottom:16px}
+.footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:12px}
+.footer-links a{font-size:13px;color:var(--text2)}
+.footer-copy{font-size:12px;color:#ffffff25}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">TV</div>
+      <span class="logo-text">TechVerse <span>Thailand</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="/">หน้าหลัก</a>
+      <a href="#ai">AI & ML</a>
+      <a href="#startup">Startup</a>
+      <a href="#gadget">Gadget</a>
+    </div>
+    <a href="https://www.facebook.com/profile.php?id=1161261103737729" class="nav-fb" target="_blank">Facebook ↗</a>
+  </div>
+</nav>
+<div id="app"></div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">TechVerse <span>Thailand</span></div>
+    <div class="footer-sub">ข่าวไอทีและเทคโนโลยีภาษาไทย อัปเดตทุกวัน</div>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/profile.php?id=1161261103737729" target="_blank">Facebook</a>
+    </div>
+    <div class="footer-copy">© 2026 TechVerse Thailand</div>
+  </div>
+</footer>
+<script>
+const BADGES={
+  'AI & ML':'b-ai','Startup & Tech Business':'b-start',
+  'Smartphone & Gadget':'b-gadget','EV & Future Tech':'b-ev',
+  'Cybersecurity':'b-cyber','Software & App':'b-soft'
+};
+const EMOJIS={
+  'AI & ML':'🤖','Startup & Tech Business':'🚀','Smartphone & Gadget':'📱',
+  'EV & Future Tech':'⚡','Cybersecurity':'🔐','Software & App':'💻'
+};
+function badge(c){return BADGES[c]||'b-tech'}
+function emoji(c){return EMOJIS[c]||'📰'}
+function fdate(d){
+  try{return new Date(d).toLocaleDateString('th-TH',{year:'numeric',month:'long',day:'numeric'})}
+  catch{return d}
+}
+function render(arts){
+  const app=document.getElementById('app');
+  if(!arts.length){
+    app.innerHTML=`<div class="empty"><div class="empty-icon">📰</div><div class="empty-title">ยังไม่มีข่าว</div><p>ข่าวจะปรากฏที่นี่หลังจาก Approve ครั้งแรก</p></div>`;
+    return;
+  }
+  const [top,...rest]=arts;
+  app.innerHTML=`
+    <div class="hero">
+      <div class="hero-label">ข่าวล่าสุด</div>
+      <div class="hero-title">เทคโนโลยีที่คนไทยต้องรู้</div>
+      <div class="hero-sub">อัปเดตข่าวไอที AI และนวัตกรรมทุกวัน โดยทีม TechVerse Thailand</div>
+    </div>
+    <div class="cats">
+      <div class="cat active">ทั้งหมด</div>
+      <div class="cat">AI & ML</div>
+      <div class="cat">Startup</div>
+      <div class="cat">Gadget</div>
+      <div class="cat">EV</div>
+      <div class="cat">Cybersecurity</div>
+      <div class="cat">Software</div>
+    </div>
+    <div class="grid-wrap">
+      <a href="news/${top.slug}.html" class="card-featured">
+        ${top.image?`<img class="card-featured-img" src="${top.image}" alt="${top.title}" loading="lazy">`:`<div class="card-featured-img-placeholder">${emoji(top.category)}</div>`}
+        <div class="card-featured-body">
+          <span class="cat-badge ${badge(top.category)}">${top.category||'Tech'}</span>
+          <div class="card-title">${top.title}</div>
+          <div class="card-excerpt">${top.excerpt}</div>
+          <div class="card-meta">
+            <span class="card-date">${fdate(top.date)}</span>
+            <span class="card-more">อ่านต่อ →</span>
+          </div>
+        </div>
+      </a>
+      <div class="sidebar">
+        ${rest.slice(0,4).map(a=>`
+          <a href="news/${a.slug}.html" class="card-small">
+            <span class="cat-badge ${badge(a.category)}" style="font-size:10px;margin-bottom:6px">${a.category||'Tech'}</span>
+            <div class="card-small-title">${a.title}</div>
+            <div class="card-small-date">${fdate(a.date)}</div>
+          </a>`).join('')}
+      </div>
+    </div>
+    ${rest.length>4?`
+    <div class="section-line"><h2>ข่าวทั้งหมด</h2></div>
+    <div class="news-grid">
+      ${rest.slice(4).map(a=>`
+        <a href="news/${a.slug}.html" class="card-news">
+          ${a.image?`<img class="card-news-img" src="${a.image}" alt="${a.title}" loading="lazy">`:`<div class="card-news-placeholder">${emoji(a.category)}</div>`}
+          <div class="card-news-body">
+            <span class="cat-badge ${badge(a.category)}" style="font-size:10px;margin-bottom:6px">${a.category||'Tech'}</span>
+            <div class="card-news-title">${a.title}</div>
+            <div class="card-news-date">${fdate(a.date)}</div>
+          </div>
+        </a>`).join('')}
+    </div>`:''}`;
+}
+async function load(){
+  try{
+    const res=await fetch(`https://api.github.com/repos/electric2008/TechVerseWeb/contents/news`);
+    if(!res.ok)throw new Error();
+    const files=await res.json();
+    const jsons=files.filter(f=>f.name.endsWith('.json'));
+    const arts=await Promise.all(jsons.map(f=>fetch(f.download_url).then(r=>r.json())));
+    arts.sort((a,b)=>new Date(b.date)-new Date(a.date));
+    render(arts);
+  }catch{render([])}
+}
+load();
+</script>
+</body>
+</html>
